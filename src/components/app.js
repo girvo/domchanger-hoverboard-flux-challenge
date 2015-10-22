@@ -1,12 +1,14 @@
 import PlanetMonitor from './planet';
+import SithList from './siths';
 
 function App(emit, refresh) {
     return { render: render };
 
-    function render({PlanetStore}) {
+    function render(AppStore) {
         return (
             ['div', { 'class': 'css-root' },
-               [PlanetMonitor, PlanetStore]]
+               [PlanetMonitor, AppStore.PlanetStore],
+               [SithList, AppStore.SithStore]]
         );
     }
 }

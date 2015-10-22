@@ -1,19 +1,27 @@
 import Hoverboard from 'hoverboard';
 import PlanetStore from './planet';
+import SithStore from './siths';
 
 let AppStore = Hoverboard({
     getInitialState() {
-        PlanetStore.getState((planetState) => {
-            this.setState({ PlanetStore: planetState });
-        });
+
+        let listenToStores = () => {
+            let planetState = PlanetStore.getState();
+            let sithState = SithStore.getState();
+
+            this.setState({
+                PlanetStore: planetState,
+                SithStore: sithState,
+            });
+        };
+
+        PlanetStore.getState(listenToStores);
+        SithStore.getState(listenToStores);
 
         return {
-            PlanetStore: {}
+            PlanetStore: {},
+            SithStore: {},
         };
-    },
-
-    onUpdate(newState) {
-        this.setState(newState);
     }
 });
 
