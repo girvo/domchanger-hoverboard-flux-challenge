@@ -4,7 +4,6 @@ import SithStore from './siths';
 
 let AppStore = Hoverboard({
     getInitialState() {
-
         let listenToStores = () => {
             let planetState = PlanetStore.getState();
             let sithState = SithStore.getState();
