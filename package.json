@@ -1,0 +1,20 @@
+{
+  "name": "flux-challenge-domchanger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack-dev-server & node ./flux-challenge/server/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "domchanger": "^1.0.2",
+    "hoverboard": "^1.5.0"
+  }
+}

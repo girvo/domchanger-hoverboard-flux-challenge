@@ -1,0 +1,6 @@
+# Dependencies
+/node_modules
+/flux-challenge
+
+# Compiled
+/bundle.js
